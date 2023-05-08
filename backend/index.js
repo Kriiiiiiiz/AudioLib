@@ -1,7 +1,7 @@
 require('dotenv').config()
 
 const { auth, requiresAuth } = require('express-openid-connect');
-const routerApi = require("./src/router/routes");
+const routerUser = require("./src/router/user");
 const express = require('express')
 const app = express()
 const port = 3000
@@ -27,7 +27,8 @@ app.get('/', (req, res) => {
   res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
 });
 
-app.use("/api", routerApi);
+app.use("/api/user", routerUser);
+//app.use("/api/playlist", routerPlaylist);
 
 app.get('/profile', requiresAuth(), (req, res) => {
   console.log(JSON.stringify(req.oidc.user.sub));
