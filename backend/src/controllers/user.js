@@ -30,6 +30,10 @@ exports.getAuth = async (req, res) => {
         
     }
 
-    res.send({username: req.oidc.user.username})
+    res.send({username: req.oidc.user.name})
 
+}
+
+exports.modifyUser = (req, res) => {
+    
 }

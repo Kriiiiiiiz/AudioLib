@@ -1,0 +1,5 @@
+- una pagina de perfil del usuario para que modifique su foto y su nombre.
+- un buscador de canciones
+- pagina de listado de playlist
+- pagina de la playlist por dentro
+- reproductor
